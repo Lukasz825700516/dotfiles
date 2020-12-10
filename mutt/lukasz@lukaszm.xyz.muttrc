@@ -1,0 +1,24 @@
+set folder      = "~/.local/share/mail/lukasz@lukaszm.xyz"
+set spoolfile   = +Inbox
+
+mailboxes =Inbox
+mailboxes =Sent
+mailboxes =Trash
+mailboxes =Junk
+mailboxes =Drafts
+
+# Specify where to save and/or look for postponed messages.
+set postponed = +Drafts
+
+set realname='Lukasz'
+set from=lukasz@lukaszm.xyz
+set use_from=yes
+
+
+set smtp_pass=`pass websites/lukaszm.xyz/lukasz`
+set smtp_url=smtps://###################
+set ssl_force_tls = yes
+
+
+set pgp_default_key=lukasz@lukaszm.xyz
+set signature="~/.config/mutt/lukasz@lukaszm.xyz.signature"

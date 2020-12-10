@@ -1,0 +1,26 @@
+SyncState *
+Sync New ReNew Flags
+
+IMAPAccount lukasz@lukaszm.xyz
+Host ##############
+User lukasz
+PassCmd "pass websites/lukaszm.xyz/lukasz"
+
+
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore lukasz@lukaszm.xyz-remote
+Account lukasz@lukaszm.xyz
+
+MaildirStore lukasz@lukaszm.xyz-local
+SubFolders Verbatim
+Path ~/.local/share/mail/lukasz@lukaszm.xyz/
+Inbox ~/.local/share/mail/lukasz@lukaszm.xyz/Inbox
+
+Channel lukasz@lukaszm.xyz
+Master :lukasz@lukaszm.xyz-remote:
+Slave :lukasz@lukaszm.xyz-local:
+Patterns *
+Create Both
+SyncState *

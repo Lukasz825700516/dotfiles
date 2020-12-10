@@ -1,0 +1,33 @@
+#
+# My personal .muttrc
+# Contact me on <lukasz@lukaszm.xyz> for more info
+#
+
+
+# KEYBINDS, GPG
+
+source ~/.config/mutt/unbind.muttrc
+source ~/.config/mutt/vimkeys.muttrc
+source ~/.config/mutt/gpg.rc
+
+
+# THEME
+
+source ~/.config/mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+set sidebar_visible=yes
+set pager_stop=yes
+set mail_check_stats=yes
+set sidebar_format="  %B%* %F:%N:%S  "
+set sort=threads
+
+
+# MAILBOXES CONFIG
+
+source ~/.config/mutt/lukasz@lukaszm.xyz.muttrc
+
+
+# CONTACTS, AUTOCOMPLETITION
+
+set query_command= "abook --mutt-query '%s'"
+macro index,pager  ,a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+bind editor        <Tab> complete-query
