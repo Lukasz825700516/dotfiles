@@ -12,22 +12,22 @@
 
 # MOVEMENT
 
-bind index,pager,query / search
-bind index,pager,query ? search-reverse
-bind index,pager,query n search-next
-bind index,pager,query N search-opposite
+bind index,pager,query,attach / search
+bind index,pager,query,attach ? search-reverse
+bind index,pager,query,attach n search-next
+bind index,pager,query,attach N search-opposite
 
-bind index,browser,query j next-entry
-bind index,browser,query k previous-entry
-bind index,browser,query H top-page
-bind index,browser,query L bottom-page
-bind index,browser,query gg first-entry
-bind index,browser,query G last-entry
+bind index,browser,query,attach j next-entry
+bind index,browser,query,attach k previous-entry
+bind index,browser,query,attach H top-page
+bind index,browser,query,attach L bottom-page
+bind index,browser,query,attach gg first-entry
+bind index,browser,query,attach G last-entry
 
-bind index,pager  half-up
-bind index,pager  half-down
-bind index,pager  previous-line
-bind index,pager  next-line
+bind index,pager,attach  half-up
+bind index,pager,attach  half-down
+bind index,pager,attach  previous-line
+bind index,pager,attach  next-line
 
 bind pager k previous-line
 bind pager j next-line
@@ -50,6 +50,7 @@ bind index M reply
 
 bind pager m reply
 bind pager h exit
+bind pager :o view-attachments
 
 bind compose q exit
 bind compose h postpone-message
@@ -57,10 +58,15 @@ bind compose :r attach-file
 bind compose l send-message
 bind compose s pgp-menu
 
+bind attach q exit
+bind attach h exit
+bind attach <Return> view-attach
+bind attach l view-attach
+
 
 # OTHER
 
-bind index,pager,compose,query :h help
+bind index,pager,compose,query,attach :h help
 
 bind index,pager <Esc> quit
 
